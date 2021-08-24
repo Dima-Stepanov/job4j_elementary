@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.calculator;
 
 /**
  * 1.1.2. Тип данных
