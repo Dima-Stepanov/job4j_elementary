@@ -52,7 +52,7 @@ public class LogicNot {
      * @return boolean
      */
     public static boolean notEvenAndPositive(int num) {
-        return !isEven(num) && isPositive(num);
+        return notEven(num) && isPositive(num);
     }
 
     /**
