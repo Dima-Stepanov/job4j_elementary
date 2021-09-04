@@ -2,7 +2,7 @@ package ru.job4j.array;
 
 /**
  * 1.1.6.Массивы
- * 6.2.3.Перевернуть массив.[#226790#127124]
+ * 6.3.Массив заполнен true или false[#53857#127118]
  */
 public class Check {
     public static boolean mono(boolean[] data) {
