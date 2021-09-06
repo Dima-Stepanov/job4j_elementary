@@ -2,7 +2,7 @@ package ru.job4j.array;
 
 /**
  * 1.1.6.Массивы
- * 6.6.3.Двухмерный массив.If.[#306727]
+ * 6.6.3.Двухмерный массив.If. [#306727]
  */
 public class SkipNegative {
     public static int[][] skip(int[][] array) {

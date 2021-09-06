@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * 1.1.6.Массивы
- * 6.6.3.Двухмерный массив.If.[#306727]test
+ * 6.6.3.Двухмерный массив.If. [#306727]test
  */
 public class SkipNegativeTest {
 
