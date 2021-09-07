@@ -4,6 +4,7 @@ package ru.job4j.array;
  * 1.1.6.Массивы
  * 6.7.1.Моно строка в матрице.[#214126#127110]
  * 6.7.2.Моно столбец в матрице.[#214127#127111]
+ * 6.7.3.Массив из диагонали матрицы.[#214128#127109]
  */
 public class MatrixCheck {
     /**
@@ -42,5 +43,18 @@ public class MatrixCheck {
             }
         }
         return result;
+    }
+
+    /**
+     * 6.7.3.Массив из диагонали матрицы.[#214128#127109]
+     * @param board char[][]
+     * @return char[]
+     */
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
     }
 }

@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
  * 1.1.6.Массивы
  * 6.7.1.Моно строка в матрице.[#214126#127110]test
  * 6.7.2.Моно столбец в матрице.[#214127#127111]test
+ * 6.7.3.Массив из диагонали матрицы.[#214128#127109]test
  */
 public class MatrixCheckTest {
     /*
@@ -65,4 +66,42 @@ public class MatrixCheckTest {
         Assert.assertFalse(result);
     }
 
+    /*
+    6.7.3.Массив из диагонали матрицы.[#214128#127109]
+     */
+    @Test
+    public void whenDiagonalFullX() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'X', 'X'};
+        Assert.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void whenDiagonalFullOne() {
+        char[][] input = {
+                {'1', ' ', ' '},
+                {' ', '1', ' '},
+                {' ', ' ', '1'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'1', '1', '1'};
+        Assert.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void whenDiagonalMix() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'Y', ' '},
+                {' ', ' ', 'Z'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'Y', 'Z'};
+        Assert.assertArrayEquals(expected, result);
+    }
 }
