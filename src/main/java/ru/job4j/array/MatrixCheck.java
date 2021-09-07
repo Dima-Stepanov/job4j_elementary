@@ -5,6 +5,7 @@ package ru.job4j.array;
  * 6.7.1.Моно строка в матрице.[#214126#127110]
  * 6.7.2.Моно столбец в матрице.[#214127#127111]
  * 6.7.3.Массив из диагонали матрицы.[#214128#127109]
+ * 6.7.4.Выигрышные комбинации в сокобан[#53859#127127]
  */
 public class MatrixCheck {
     /**
@@ -47,6 +48,7 @@ public class MatrixCheck {
 
     /**
      * 6.7.3.Массив из диагонали матрицы.[#214128#127109]
+     *
      * @param board char[][]
      * @return char[]
      */
@@ -54,6 +56,25 @@ public class MatrixCheck {
         char[] rsl = new char[board.length];
         for (int i = 0; i < board.length; i++) {
             rsl[i] = board[i][i];
+        }
+        return rsl;
+    }
+
+    /**
+     * 6.7.4.Выигрышные комбинации в сокобан[#53859#127127]
+     *
+     * @param board char[][]
+     * @return boolean isWin
+     */
+    public static boolean isWin(char[][] board) {
+        boolean rsl = false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X' && (monoHorizontal(board, i) || monoVertical(board, i))) {
+                if (monoHorizontal(board, i) || monoVertical(board, i)) {
+                    rsl = true;
+                    break;
+                }
+            }
         }
         return rsl;
     }
