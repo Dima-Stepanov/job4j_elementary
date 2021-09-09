@@ -8,6 +8,11 @@ import static org.junit.Assert.*;
 /**
  * 1.1.4.Оператор ветвления
  * 4.2.Тернарное сравнение[#189#127107]Test
+ * 1.2.1.Классы и объекты
+ * 3.Перегрузить метод max для трех чисел[#122644#127048]test
+ *
+ * @version 2
+ * @since 10.09.2021
  */
 public class MaxTest {
 
@@ -46,4 +51,24 @@ public class MaxTest {
         int expected = 5;
         Assert.assertEquals(result, expected);
     }
+
+    @Test
+    public void whenMax1To2To3Then3() {
+        int first = 1;
+        int second = 2;
+        int third = 3;
+        int rsl = Max.max(first, second, third);
+        assertEquals(3, rsl);
+    }
+
+    @Test
+    public void whenMax5To2To3To4Then5() {
+        int first = 5;
+        int second = 2;
+        int third = 3;
+        int four = 4;
+        int rsl = Max.max(first, second, third, four);
+        assertEquals(5, rsl);
+    }
+
 }
